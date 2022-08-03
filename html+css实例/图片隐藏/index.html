@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 320px;
+            margin: 20px auto 0;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 2px 2px 20px black;
+            /* 鼠标 */
+            cursor: pointer;
+        }
+
+        a{
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+            color: white;
+        }
+
+        img{
+            width: 100%;
+            vertical-align: top;
+        }
+
+        p{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .hidden{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 0;
+            transition:  opacity 1s;
+            background: rgba(0,0,0,.5);
+        }
+
+        .fontgroup{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 60px;
+            margin: auto;
+        }
+
+        .title{
+            padding: 7px;
+            color: gray;
+        }
+
+        .fontgroup p:first-child{
+            font-size: 30px;
+        }
+
+        section:hover .title{
+            color: black;
+        }
+
+        section:hover .hidden{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <a href="">
+            <img src="img/img.jpg" alt="">
+            <div class="hidden">
+                <div class="fontgroup">
+                    <p>腾讯</p>
+                    <p>今天就看今日头条</p>
+                </div>
+            </div>
+        </a>
+        <p class="title">腾讯网络媒体峰会</p>
+    </section>
+</body>
+</html>
